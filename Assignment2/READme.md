@@ -1,5 +1,13 @@
 ## Assignment2
 
+## Installing Dependencies
+
+Run the following command to install dependencies:
+
+```
+npm install
+```
+
 ### Choosing the Input
 
 Choose the data from `input.json`
@@ -21,7 +29,7 @@ Run the command in terminal
 
 ```
 
-python3 index.py
+node index.js
 
 ```
 
