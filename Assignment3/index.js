@@ -33,17 +33,14 @@ const main = async () => {
   hash_update = hash.update(newbuff, "binary");
   generated_hash = hash_update.digest("hex");
   transactions.transcationId = generated_hash;
-  var buf10 = num256.numto256(transactions.transcationId);
-  flist.push(buf10, newbuff);
-  var fbuff = Buffer.concat(flist);
   console.log(transactions);
-  console.log(fbuff);
+  console.log(newbuff);
 
-  var filePath = "./binaryfiles/" + generated_hash + ".dat";
+  var filePath = "./binaryfiles/" + transactions.transcationId + ".dat";
 
   fs.closeSync(fs.openSync(filePath, "w"));
   var wstream = fs.createWriteStream(filePath);
-  wstream.write(fbuff);
+  wstream.write(newbuff);
   wstream.end();
 };
 
