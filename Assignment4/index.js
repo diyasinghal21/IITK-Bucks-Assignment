@@ -74,7 +74,7 @@ const main = async () => {
       );
       var len = parseInt(convert2int(buff.slice(i, i + 4)));
       i = i + 4;
-      console.log("\t\t Signature :", convert2str(buff.slice(i, i + len)));
+      console.log("\t\t Signature :", num2hex(buff.slice(i, i + len)));
       i = i + len;
     }
     const noofOutputs = buff.slice(i, i + 4);
